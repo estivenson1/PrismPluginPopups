@@ -4,8 +4,15 @@
              x:Class="PrismPluginPopups.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+
+ 
+        <Entry Text="{Binding Message}" />
+        <Button Text="Show Popup"
+                Command="{Binding ShowPopupCommand}"/>
+        <Button Text="Show Dialog"
+                Command="{Binding ShowDialogCommand}"
+                Style="{StaticResource DarkButton}" />
     </StackLayout>
 
 </ContentPage>
